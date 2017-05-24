@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">HackerNews</string>
+    <string name="notify_network_unavailable">Please turn on network</string>
+</resources>
