@@ -8,9 +8,14 @@ import android.os.Parcelable;
  */
 
 public class StoryItem extends Item implements Parcelable {
-    String url;
-    int score;
-    String[] commentsId;
+    String url=null;
+    int score=0;
+    String[] commentsId= new String[0];
+
+    public StoryItem(int id){
+        super(id);
+        this.type = ItemType.story;
+    }
 
     public StoryItem(int id, String title, String url, int score, String author, long postTime, String[] comments){
         super(id, title, author,postTime);

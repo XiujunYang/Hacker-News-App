@@ -5,13 +5,17 @@ package com.example.hackernews;
  */
 
 public abstract class Item {
-    int id;
-    String content;//StoryItem is title, CommentItem is text.
-    String author;
-    long postTime;
+    int id=-1;
+    String content=null;//StoryItem is title, CommentItem is text.
+    String author=null;
+    long postTime=System.currentTimeMillis()/1000;
     ItemType type;
 
     static enum ItemType{job,story,comment,poll,pollopt}
+
+    protected Item(int id){
+        this.id = id;
+    }
 
     protected Item(int id, String content, String author, long postTime){
         this.id = id;

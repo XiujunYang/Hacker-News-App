@@ -47,9 +47,11 @@ public class CustomizedAdapter extends RecyclerView.Adapter<CustomizedAdapter.Vi
     public void onBindViewHolder(CustomizedAdapter.ViewHolder holder, final int position) {
         if(type == Item.ItemType.story) holder.content.setText(itemList.get(position).content);
         else{
-            if(android.os.Build.VERSION.SDK_INT>=android.os.Build.VERSION_CODES.N)
+            if(itemList.get(position).content!=null) {
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N)
                 holder.content.setText(Html.fromHtml(itemList.get(position).content, Html.FROM_HTML_MODE_COMPACT));
             else holder.content.setText(Html.fromHtml(itemList.get(position).content));
+        }
         }
         holder.author.setText(itemList.get(position).author==null?"[null]":itemList.get(position).author);
         Date now = new Date(System.currentTimeMillis());
@@ -73,7 +75,7 @@ public class CustomizedAdapter extends RecyclerView.Adapter<CustomizedAdapter.Vi
                     StoryItem item = (StoryItem) itemList.get(position);
                     if (item != null && item.commentsId != null && item.commentsId.length > 0) {
                         Intent intent = new Intent(context, CommentsActivity.class);
-                        intent.putExtra("commentIds", item.commentsId);
+                        intent.putExtra("parentId", item.id);
                         intent.setFlags(FLAG_ACTIVITY_NEW_TASK|FLAG_ACTIVITY_CLEAR_TOP);
                         context.startActivity(intent);
                     }

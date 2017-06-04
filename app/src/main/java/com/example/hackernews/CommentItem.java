@@ -8,7 +8,12 @@ import android.os.Parcelable;
  */
 
 public class CommentItem extends Item implements Parcelable {
-    int parent;
+    int parent=-1;
+
+    public CommentItem(int id){
+        super(id);
+        this.type=ItemType.comment;
+    }
 
     public CommentItem(int id, String comment, String author, long postTime, int parent){
         super(id,comment,author,postTime);
