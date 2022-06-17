@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="good_morning">good morning jean</string>
+  <string name="greeting1">How is your day?</string>
+  <string name="short_greeting">Hello</string>
+  <string name="error1">invalid username/password, please check</string>
+</resources>
