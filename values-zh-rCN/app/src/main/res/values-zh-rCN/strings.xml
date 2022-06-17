@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="app_name">黑客新闻</string>
+  <string name="notify_network_unavailable">请打开网络</string>
+</resources>
