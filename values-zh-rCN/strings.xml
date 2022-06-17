@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="good_morning">早上好</string>
+  <string name="greeting1">你过得好吗？</string>
+  <string name="short_greeting">你好</string>
+  <string name="error1"></string>
+</resources>
